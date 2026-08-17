@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Junwen Chen's research journey toward efficient and generalizable human-object interaction detection, presented at the ICPR 2026 Doctoral Consortium.">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta property="og:title" content="Junwen Chen · Human-Object Interaction Research">
+  <meta property="og:description" content="From parallel queries to multimodal reasoning — six projects across a master's and Ph.D. research journey.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/og.png">
+  <title>Junwen Chen · Human-Object Interaction Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to research</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Back to top">
+      <span class="wordmark-mark">JC</span>
+      <span><strong>Junwen Chen</strong><small>HOI Research</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="#journey">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#hoi-r1">HOI-R1</a>
+      <a href="#poster">Poster</a>
+      <a href="#future">Next</a>
+    </nav>
+    <div class="header-actions">
+      <a class="text-link desktop-only" href="https://github.com/cjw2021" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">◐</button>
+      <button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#journey">Journey</a><a href="#projects">Projects</a><a href="#hoi-r1">HOI-R1</a><a href="#poster">Poster</a><a href="#future">Next</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span>ICPR 2026</span> Doctoral Consortium · Lyon, France</p>
+        <h1>Towards <em>Efficient</em> and <em>Generalizable</em> Human-Object Interaction Detection</h1>
+        <p class="hero-summary">My research asks a deceptively simple question: how can machines understand not only <strong>what is in an image</strong>, but <strong>what people are doing with it</strong>?</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#journey">Explore the research <span>↓</span></a>
+          <a class="button secondary" href="docs/hoi-r1-poster.pdf" target="_blank">Open ICPR poster <span>↗</span></a>
+        </div>
+        <dl class="hero-meta">
+          <div><dt>Researcher</dt><dd>Junwen Chen</dd></div>
+          <div><dt>Supervisor</dt><dd>Prof. Keiji Yanai</dd></div>
+          <div><dt>Affiliation</dt><dd>The University of Electro-Communications</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Human-object interaction triplet visualization">
+        <div class="visual-label">HOI = structured visual understanding</div>
+        <div class="triplet-stage">
+          <div class="triplet-node human"><span>01</span><strong>human</strong><small>localize</small></div>
+          <div class="triplet-connector"><b>〈</b><i></i></div>
+          <div class="triplet-node verb"><span>02</span><strong>interaction</strong><small>reason</small></div>
+          <div class="triplet-connector"><i></i><b>〉</b></div>
+          <div class="triplet-node object"><span>03</span><strong>object</strong><small>associate</small></div>
+        </div>
+        <div class="visual-caption"><span>Input</span><span>Visual features</span><span>Structured triplets</span></div>
+        <div class="signal-grid" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="thesis-strip" aria-label="Thesis focus">
+      <p>One thesis · three persistent bottlenecks</p>
+      <div><span>01</span> Learning stability</div>
+      <div><span>02</span> Detection efficiency</div>
+      <div><span>03</span> Reasoning &amp; generalization</div>
+    </section>
+
+    <section class="section intro" id="journey">
+      <header class="section-heading reveal">
+        <p class="section-index">01 / Research journey</p>
+        <h2>From query design to <span>multimodal reasoning.</span></h2>
+        <p>Six first-author projects trace a continuous path from my master's research to my doctoral work. Each step resolves one limitation exposed by the previous generation.</p>
+      </header>
+
+      <div class="journey-map reveal">
+        <div class="journey-axis" aria-hidden="true"><span></span></div>
+        <article class="journey-era foundations">
+          <div class="era-marker"><b>2022—23</b><span>M.S.</span></div>
+          <div class="era-content">
+            <p class="micro-label">Early foundations</p>
+            <h3>Structuring the query</h3>
+            <p>PQNet separates human and object localization into parallel branches. QAHOI adds multi-scale, query-based anchors for stronger spatial initialization.</p>
+            <div class="era-tags"><span>PQNet</span><span>QAHOI</span></div>
+          </div>
+        </article>
+        <article class="journey-era detector">
+          <div class="era-marker"><b>2024—26</b><span>Ph.D.</span></div>
+          <div class="era-content">
+            <p class="micro-label">Detector-centric line</p>
+            <h3>Stabilizing and streamlining detection</h3>
+            <p>SOV-STG-VLA disentangles decoding and anchors training in semantic priors. Hybrid-SOV rebuilds the detection foundation. HOIBlender removes the encoder bottleneck entirely.</p>
+            <div class="era-tags"><span>SOV-STG-VLA</span><span>Hybrid-SOV</span><span>HOIBlender</span></div>
+          </div>
+        </article>
+        <article class="journey-era reasoning">
+          <div class="era-marker"><b>2026→</b><span>Future</span></div>
+          <div class="era-content">
+            <p class="micro-label">Reasoning-centric line</p>
+            <h3>Teaching MLLMs to reason about interactions</h3>
+            <p>HOI-R1 reframes HOI detection as structured multimodal reasoning, combining thinking distillation with reinforcement learning.</p>
+            <div class="era-tags"><span>HOI-R1</span><span>Open-vocabulary HOI</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <header class="section-heading compact reveal">
+        <p class="section-index">02 / Selected work</p>
+        <h2>Six projects. <span>One evolving research question.</span></h2>
+      </header>
+
+      <div class="filter-bar reveal" role="group" aria-label="Filter research projects">
+        <button class="filter-button active" data-filter="all" type="button">All work <span>6</span></button>
+        <button class="filter-button" data-filter="foundation" type="button">Foundations <span>2</span></button>
+        <button class="filter-button" data-filter="detector" type="button">Detector-centric <span>3</span></button>
+        <button class="filter-button" data-filter="reasoning" type="button">Reasoning-centric <span>1</span></button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal" data-category="foundation">
+          <div class="project-media"><img src="assets/images/pqnet.png" alt="PQNet architecture with parallel subject and object queries" loading="lazy"><span class="project-number">01</span></div>
+          <div class="project-body">
+            <div class="project-kicker"><span>MMAsia 2022</span><span>Foundation</span></div>
+            <h3>PQNet</h3>
+            <p class="project-title">Parallel Queries for Human-Object Interaction Detection</p>
+            <p>Separates human and object localization into parallel transformer decoders, then fuses both representations in a dedicated verb decoder.</p>
+            <details><summary>Why it mattered <span>+</span></summary><p>PQNet established the thesis's central design principle: different elements of an HOI triplet benefit from specialized query pathways. It outperformed prior methods with half the training epochs.</p></details>
+            <div class="project-links"><a href="https://dl.acm.org/doi/10.1145/3551626.3564944" target="_blank" rel="noreferrer">Paper ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="foundation">
+          <div class="project-media"><img src="assets/images/qahoi.png" alt="QAHOI multi-scale query-based anchor architecture" loading="lazy"><span class="project-number">02</span><span class="award-badge">Best Paper</span></div>
+          <div class="project-body">
+            <div class="project-kicker"><span>MVA 2023</span><span>Foundation</span></div>
+            <h3>QAHOI</h3>
+            <p class="project-title">Query-Based Anchors for Human-Object Interaction Detection</p>
+            <p>Introduces multi-scale query-based anchors that adapt to variations in object size and location for end-to-end HOI prediction.</p>
+            <details><summary>Why it mattered <span>+</span></summary><p>QAHOI strengthened spatial initialization and demonstrated substantial gains with a transformer backbone on HICO-DET. The work received the MVA 2023 Best Paper Award.</p></details>
+            <div class="project-links"><a href="https://ieeexplore.ieee.org/document/10215534" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://github.com/cjw2021/QAHOI" target="_blank" rel="noreferrer">Code ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card wide reveal" data-category="detector">
+          <div class="project-media"><img src="assets/images/sov-stg-vla.png" alt="SOV-STG-VLA subject, object and verb decoding architecture" loading="lazy"><span class="project-number">03</span></div>
+          <div class="project-body">
+            <div class="project-kicker"><span>WACV 2025</span><span>Detector-centric</span></div>
+            <h3>SOV-STG-VLA</h3>
+            <p class="project-title">Focusing on What to Decode and What to Train</p>
+            <p>Disentangles Subject, Object and Verb decoding, guides training with target-aware denoising, and injects BLIP-2 semantic priors through a Vision-Language Advisor.</p>
+            <div class="inline-metrics"><div><strong>15</strong><span>training epochs</span></div><div><strong>45.64</strong><span>Full mAP · Swin-L</span></div><div><strong>6×</strong><span>faster convergence</span></div></div>
+            <details><summary>Core contribution <span>+</span></summary><p>The work shows that decoder training should be target-aware and semantically anchored from the start, improving stability without sacrificing accuracy.</p></details>
+            <div class="project-links"><a href="https://doi.org/10.1109/WACV61041.2025.00912" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://github.com/cjw2021/SOV-STG-VLA" target="_blank" rel="noreferrer">Code ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card wide reverse reveal" data-category="detector">
+          <div class="project-media"><img src="assets/images/hybrid-sov.jpg" alt="Hybrid-SOV architecture with hybrid encoder and foundation-model backbone" loading="lazy"><span class="project-number">04</span></div>
+          <div class="project-body">
+            <div class="project-kicker"><span>IEEE Access 2026</span><span>Detector-centric</span></div>
+            <h3>Hybrid-SOV</h3>
+            <p class="project-title">Bridging Detection Architectures with Foundation Models</p>
+            <p>Co-designs the HOI decoder with an RT-DETR-style hybrid encoder, self-supervised visual features, and context-aware HOI query selection.</p>
+            <div class="inline-metrics"><div><strong>46.89</strong><span>Full mAP</span></div><div><strong>47.67</strong><span>Rare mAP</span></div><div><strong>15</strong><span>training epochs</span></div></div>
+            <details><summary>Core contribution <span>+</span></summary><p>Hybrid-SOV treats the detection foundation as a first-class design decision: query construction begins from image evidence rather than random or predefined embeddings.</p></details>
+            <div class="project-links"><a href="https://ieeexplore.ieee.org/document/11367687" target="_blank" rel="noreferrer">Paper ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="detector">
+          <div class="project-media"><img src="assets/images/hoiblender.jpg" alt="HOIBlender encoder-free dual-stage architecture" loading="lazy"><span class="project-number">05</span><span class="status-badge">Under review</span></div>
+          <div class="project-body">
+            <div class="project-kicker"><span>2026</span><span>Detector-centric</span></div>
+            <h3>HOIBlender</h3>
+            <p class="project-title">A Next-Generation HOI Detection Baseline</p>
+            <p>Removes the dedicated encoder, selects subject-object candidates directly from backbone features, and blends spatial and language priors through dual-stage decoding.</p>
+            <details><summary>Core contribution <span>+</span></summary><p>An RF-DETR-style encoder-free pipeline combines progressive BLIP-2 prior fusion with grouped-query training, preserving efficiency while strengthening long-tail recognition.</p></details>
+          </div>
+        </article>
+
+        <article class="project-card featured reveal" data-category="reasoning">
+          <div class="project-media"><img src="assets/images/hoi-r1.png" alt="HOI-R1 reasoning examples and reinforcement learning framework" loading="lazy"><span class="project-number">06</span><span class="featured-badge">ICPR 2026</span></div>
+          <div class="project-body">
+            <div class="project-kicker"><span>ICPR 2026</span><span>Reasoning-centric</span></div>
+            <h3>HOI-R1</h3>
+            <p class="project-title">Exploring the Potential of Multimodal Large Language Models for HOI Detection</p>
+            <p>Reframes interaction detection as structured language reasoning and aligns MLLMs through thinking distillation, supervised fine-tuning, and GRPO.</p>
+            <details><summary>Core contribution <span>+</span></summary><p>HOI-R1 introduces task-specific rewards for output format, object labels, verb labels and box IoU. Gains across four MLLM families suggest a general route toward more interpretable and generalizable HOI systems.</p></details>
+            <div class="project-links"><a href="https://arxiv.org/abs/2510.05609v2" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://github.com/cjw2021/HOI-R1" target="_blank" rel="noreferrer">Code ↗</a><a href="#poster">Poster ↓</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section hoi-r1-section" id="hoi-r1">
+      <div class="hoi-r1-header reveal">
+        <div><p class="section-index light">03 / ICPR 2026 spotlight</p><h2>HOI-R1 turns detection into a <span>reasoning process.</span></h2></div>
+        <p>Traditional HOI pipelines rely on external detectors and fixed recognition heads. HOI-R1 asks an MLLM to observe, reason, and return structured human-object-interaction triplets directly.</p>
+      </div>
+
+      <div class="reasoning-flow reveal" aria-label="HOI-R1 training and inference flow">
+        <article><span>01</span><div><small>Task design</small><h3>Structured prompting</h3><p>Guide the model through humans, objects, and interactions with a precise answer schema.</p></div></article>
+        <i aria-hidden="true">→</i>
+        <article><span>02</span><div><small>Knowledge transfer</small><h3>Thinking distillation</h3><p>Learn concise reasoning traces from a stronger teacher MLLM through supervised fine-tuning.</p></div></article>
+        <i aria-hidden="true">→</i>
+        <article><span>03</span><div><small>Alignment</small><h3>GRPO rewards</h3><p>Optimize format, labels and localization with HOID-specific reward signals.</p></div></article>
+      </div>
+
+      <div class="results-panel reveal">
+        <div class="result-copy">
+          <p class="micro-label">A signal for generalization</p>
+          <h3>World knowledge already lives inside MLLMs.</h3>
+          <p>A training-free 72B MLLM reaches <strong>29.62 mAP on rare HICO-DET classes</strong>, exceeding the rare-class score of QPIC after 150 training epochs. HOI-R1 then surfaces and aligns this implicit interaction knowledge in smaller models.</p>
+          <a class="arrow-link" href="https://arxiv.org/abs/2510.05609v2" target="_blank" rel="noreferrer">Read the ICPR paper <span>↗</span></a>
+        </div>
+        <div class="result-chart" role="img" aria-label="Rare-class mAP comparison: QPIC 21.85, zero-shot Qwen 2.5 VL 72B 29.62, HOI-R1 Qwen 3.5 4B 30.39">
+          <div class="chart-row"><span>QPIC · 150 epochs</span><div><i style="--score:71.9%"></i></div><strong>21.85</strong></div>
+          <div class="chart-row"><span>Qwen2.5-VL-72B · zero-shot</span><div><i style="--score:97.5%"></i></div><strong>29.62</strong></div>
+          <div class="chart-row accent"><span>HOI-R1-Qwen3.5-4B</span><div><i style="--score:100%"></i></div><strong>30.39</strong></div>
+          <p>HICO-DET · Default rare split · mAP ↑</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section poster-section" id="poster">
+      <header class="section-heading reveal">
+        <p class="section-index">04 / Poster</p>
+        <h2>The complete HOI-R1 story, <span>in one view.</span></h2>
+        <p>Browse the ICPR 2026 poster below, open it full screen, or download the original print-ready PDF.</p>
+      </header>
+      <div class="poster-shell reveal">
+        <button class="poster-preview" id="open-poster" type="button" aria-label="Open the HOI-R1 poster in a full-screen viewer">
+          <img src="assets/images/hoi-r1-poster.webp" alt="Full HOI-R1 ICPR 2026 research poster" loading="lazy">
+          <span class="poster-overlay"><b>Open full-screen viewer</b><small>Click to inspect details</small></span>
+        </button>
+        <aside class="poster-notes">
+          <p class="micro-label">Poster guide</p>
+          <ol>
+            <li><span>01</span><div><strong>Problem &amp; motivation</strong><small>Why MLLMs change the HOID pipeline</small></div></li>
+            <li><span>02</span><div><strong>Framework</strong><small>SFT knowledge transfer + GRPO alignment</small></div></li>
+            <li><span>03</span><div><strong>Reward design</strong><small>Format, label and localization signals</small></div></li>
+            <li><span>04</span><div><strong>Results</strong><small>HICO-DET comparisons and scaling trends</small></div></li>
+          </ol>
+          <a class="button primary full" href="docs/hoi-r1-poster.pdf" download>Download poster · PDF <span>↓</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section future-section" id="future">
+      <header class="section-heading compact reveal">
+        <p class="section-index">05 / What comes next</p>
+        <h2>Precise perception meets <span>open-ended reasoning.</span></h2>
+      </header>
+      <div class="future-grid">
+        <article class="future-card reveal"><span>Direction A</span><h3>Hybrid detector–MLLM systems</h3><p>Use HOIBlender to supply precise spatial priors, then let an MLLM verify, explain, and refine interaction hypotheses in an iterative loop.</p><div class="future-path"><b>HOIBlender</b><i>+</i><b>HOI-R1</b></div></article>
+        <article class="future-card reveal"><span>Direction B</span><h3>Open-vocabulary HOI detection</h3><p>Learn a compositional verb-object space through language-initialized classifiers and contrastive objectives rather than a fixed, flat label table.</p><div class="future-path"><b>VLA priors</b><i>+</i><b>Compositional learning</b></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><p class="footer-kicker">Let’s discuss human-object interaction.</p><h2>Junwen Chen</h2><p>Ph.D. Candidate · Yanai Laboratory<br>The University of Electro-Communications, Tokyo</p></div>
+    <div class="footer-links"><a href="mailto:chen-j@mm.inf.uec.ac.jp">Email ↗</a><a href="https://github.com/cjw2021" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://scholar.google.jp/citations?user=LiCkH5MAAAAJ" target="_blank" rel="noreferrer">Google Scholar ↗</a><a href="#top">Back to top ↑</a></div>
+    <p class="footer-note">ICPR 2026 Doctoral Consortium · Research conducted under the supervision of Prof. Keiji Yanai</p>
+  </footer>
+
+  <dialog class="poster-dialog" id="poster-dialog" aria-labelledby="poster-dialog-title">
+    <div class="dialog-toolbar"><div><strong id="poster-dialog-title">HOI-R1 · ICPR 2026 Poster</strong><small>A4 portrait · PDF</small></div><a href="docs/hoi-r1-poster.pdf" target="_blank">Open original ↗</a><button id="close-poster" type="button" aria-label="Close poster viewer">×</button></div>
+    <object data="docs/hoi-r1-poster.pdf#view=FitH" type="application/pdf"><img src="assets/images/hoi-r1-poster.webp" alt="HOI-R1 ICPR 2026 poster"></object>
+  </dialog>
+</body>
+</html>

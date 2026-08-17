@@ -1,0 +1,10 @@
+.gitignore
+CUQS.github.io/
+2026_ICPR_Doctoral_Consortium/
+node_modules/
+.next/
+dist/
+.wrangler/
+.env*
+tmp/
+*.log
